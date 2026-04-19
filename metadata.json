@@ -1,0 +1,8 @@
+{
+  "name": "Remix: WhyNotHired",
+  "description": "Unlock the brutal truth about your interview performance. WhyNotHired uses AI to analyze your responses and reveal exactly why you didn\u0027t progress.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Candidate demographic and calibration data.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "role": { "type": "string" },
+        "experience": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "fullName", "email", "role", "experience"]
+    },
+    "InterviewSession": {
+      "title": "Interview Session",
+      "description": "A recording or transcript analysis session.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["audio", "video", "text"] },
+        "status": { "type": "string", "enum": ["processing", "completed", "failed"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "overallScore": { "type": "number" },
+        "verdict": { "type": "string" }
+      },
+      "required": ["id", "userId", "type", "createdAt"]
+    },
+    "AnalysisSegment": {
+      "title": "Analysis Segment",
+      "description": "Individual 5-10s chunk analysis.",
+      "type": "object",
+      "properties": {
+        "sessionId": { "type": "string" },
+        "index": { "type": "integer" },
+        "startTime": { "type": "number" },
+        "endTime": { "type": "number" },
+        "transcript": { "type": "string" },
+        "analysis": { "type": "string" },
+        "score": { "type": "number" },
+        "sentiment": { "type": "string" }
+      },
+      "required": ["sessionId", "index", "startTime"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document indexed by Auth UID."
+    },
+    "sessions/{sessionId}": {
+      "schema": "InterviewSession",
+      "description": "Top-level session data."
+    },
+    "sessions/{sessionId}/segments/{segmentId}": {
+      "schema": "AnalysisSegment",
+      "description": "Analyzed segments for a specific session."
+    }
+  }
+}
