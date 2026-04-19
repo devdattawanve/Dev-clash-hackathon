@@ -1,20 +1,80 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 WhyNotHired  
+### AI-Powered Interview Feedback & Rejection Analysis Platform  
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 📌 Problem Statement  
 
-View your app in AI Studio: https://ai.studio/apps/79a0e1d3-281a-41f4-a04a-e5bbd6010caf
+Many candidates face repeated job rejections without clear feedback. Traditional hiring processes often lack transparency, leaving candidates unaware of their mistakes, skill gaps, or areas of improvement. This results in frustration, slow growth, and inefficient preparation.
 
-## Run Locally
+**WhyNotHired** solves this problem by providing **AI-driven, structured feedback on interview performance**, helping candidates understand *why they were not selected* and how they can improve.
 
-**Prerequisites:**  Node.js
+---
+
+## 💡 Solution  
+
+WhyNotHired is an intelligent platform that analyzes interview responses and generates:
+
+- 📊 Detailed performance insights  
+- ⚠️ Risk & weakness detection  
+- 📈 Capability scoring  
+- 🧠 Personalized improvement suggestions  
+
+It transforms raw interview responses into **actionable insights** using AI.
+
+---
+
+## ✨ Features  
+
+- 🔍 **Diagnostic Matrix**  
+  Breaks down answers into logic, clarity, depth, and approach  
+
+- 📊 **Capability Radar**  
+  Visual representation of strengths & weaknesses  
+
+- ⚠️ **Risk Analysis**  
+  Identifies weak areas that impact hiring decisions  
+
+- 🧠 **AI Feedback Engine**  
+  Generates structured improvement suggestions  
+
+- 📈 **Hiring Verdict System**  
+  Classifies candidates (Safe Hire / Needs Improvement / Risk)  
+
+- 🎯 **Interactive UI/UX**  
+  Modern dark-themed dashboard with real-time insights  
+
+---
+
+## 🛠️ Tech Stack  
+
+### Frontend:
+- HTML, CSS, JavaScript  
+- React (Vite)  
+- Tailwind CSS  
+
+### Backend / Services:
+- Firebase (Authentication, Firestore)  
+- AI APIs (Google AI Studio / Gemini)  
+
+### Tools:
+- Git & GitHub  
+- VS Code  
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🏗️ Project Structure  
+
+
+WhyNotHired/
+│
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── hooks/
+│ ├── utils/
+│ └── main.tsx
+│
+├── public/
+├── index.html
+├── package.json
+└── README.md
